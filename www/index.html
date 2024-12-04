@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <!--
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        -->
+    <meta
+      name="viewport"
+      content="initial-scale=1, width=device-width, viewport-fit=cover"
+    />
+    <link rel="stylesheet/less" type="text/css" href="css/styles.less" />
+    <title>Escala</title>
+  </head>
+  <body>
+    <header></header>
+
+    <div id="changeScreen">
+      <button id="btnGate">Portão</button>
+      <button id="btnScale">Folgas</button>
+    </div>
+
+    <div id="openMenu">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+
+    <div class="peoplesOnWork close">
+      <div class="listH1">
+        <h2>H1 16:30 - 22:30</h2>
+      </div>
+
+      <div class="listH2">
+        <h2>H2 18:00 - 00:00</h2>
+      </div>
+
+      <div class="listH3">
+        <h2>H3 19:00 - 01:00</h2>
+      </div>
+
+      <div class="listFolga">
+        <h2>Folga</h2>
+      </div>
+    </div>
+
+    <div id="Gate">
+      <h1>Fechamento De Portões</h1>
+
+      <div class="Gates">
+        <div class="flight">
+          <h2>Miami - 0930</h2>
+          <h3>21:35 / 22:25</h3>
+          <div class="peoplesIn">
+            <div class="space0930"></div>
+            <div class="space0930"></div>
+          </div>
+        </div>
+
+        <div class="flight">
+          <h2>Dallas - 0962</h2>
+          <h3>22:10 / 23:00</h3>
+          <div class="peoplesIn">
+            <div class="space0962"></div>
+            <div class="space0962"></div>
+          </div>
+        </div>
+
+        <div class="flight">
+          <h2>Nova York - 0950</h2>
+          <h3>22:20 / 23:10</h3>
+          <div class="peoplesIn">
+            <div class="space0950"></div>
+            <div class="space0950"></div>
+          </div>
+        </div>
+
+        <div class="flight">
+          <h2>Miami - 0958</h2>
+          <h3>23:00 / 23:50</h3>
+          <div class="peoplesIn">
+            <div class="space0958"></div>
+            <div class="space0958"></div>
+          </div>
+        </div>
+
+        <div class="flight">
+          <h2>Miami - 0906</h2>
+          <h3>23:40 / 00:30</h3>
+          <div class="peoplesIn">
+            <div class="space0906"></div>
+            <div class="space0906"></div>
+          </div>
+        </div>
+      </div>
+      <button class="hidden" id="updateAssignments">Mudar</button>
+    </div>
+    <div id="Scale" class="hidden">
+      <h1>Escala de Folgas</h1>
+      <label for="funcionario">Selecione o nome do funcionário:</label>
+      <select id="funcionario">
+        <option value=""></option>
+        <option value="Dias">João Vitor</option>
+        <option value="Antonio">Antonio Jose</option>
+        <option value="Souza">Gabriel De Souza</option>
+        <option value="Menezes">Matheus De Menezes</option>
+        <option value="Severino">João Severino</option>
+        <option value="Florisvaldo">Florisvaldo Freitas</option>
+        <option value="Vitor">Vitor Oliveira</option>
+        <option value="Pereira">Matheus Pereira</option>
+        <option value="Machado">Bruno Machado</option>
+        <option value="Martins">Gabriel Martins</option>
+        <option value="Marcos">Marcos Vinicius</option>
+        <option value="Rafael">Rafael Lima</option>
+        <option value="Pedro">Pedro Henrique</option>
+      </select>
+      <button onclick="mostrarFolgas()">Mostrar Folgas</button>
+      <div id="listaDeFolgas"></div>
+    </div>
+  </body>
+  <script src="js/less.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-database-compat.js"></script>
+  <!--- <script src="cordova.js"></script>-->
+  <script src="js/index.js"></script>
+</html>
